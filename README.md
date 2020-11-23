@@ -21,5 +21,10 @@ express.js
   npm install morgan
   ```
 
+### Usage
+```sh
+  node index
+  ```
+
 # Liscense
 MIT
