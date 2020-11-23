@@ -1,0 +1,38 @@
+{
+  "name": "blanja-api",
+  "version": "1.0.0",
+  "description": "Simple, easy implementation of the private web API.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yae48/blanja-api.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "mysql",
+    "api",
+    "restfulapi",
+    "javascript" 
+  ],
+  "author": "fb.me/yae48",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yae48/blanja-api/issues"
+  },
+  "homepage": "https://github.com/yae48/blanja-api#readme"
+}
