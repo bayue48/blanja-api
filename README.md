@@ -1,4 +1,4 @@
-#blanja-api
+# blanja-api
 Simple, easy implementation of the private web API.
 
 ## About The Project
@@ -21,4 +21,5 @@ express.js
   npm install morgan
   ```
 
-##Liscense
+# Liscense
+MIT
