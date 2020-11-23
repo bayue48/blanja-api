@@ -16,7 +16,6 @@ API build in Express.js and mySQL for [yae48/blanja-web](https://github.com/yae4
   npm install mysql
   ```
 * morgan
-express.js
     ```sh
   npm install morgan
   ```
