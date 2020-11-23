@@ -2,7 +2,8 @@
 module.exports = {
     success: (res, data) => {
         const resObject = {
-            status: 200,
+            status: 'success',
+            code: 200,
             data,
             };
             res.json(resObject);
