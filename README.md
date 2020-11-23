@@ -14,6 +14,9 @@ API build in Express.js and mySQL for [yae48/blanja-web](https://github.com/yae4
 ### Prerequisites
 
 * [npm](https://nodejs.org/en/download/)
+  ```sh
+  npm install npm@latest -g
+  ```
 
 ### Installation
 
@@ -33,16 +36,9 @@ Please create database and make the changes in the `/src/config/mySQL.js` file.
 
 ### Usage
 
-```sh node index
-``` 
-OR 
-```sh nodemon start
-``` 
-OR 
-```sh npm start
-```
+`node index` OR `nodemon start` OR `npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in the development mode.
 Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
 ## License
