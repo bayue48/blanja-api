@@ -1,5 +1,5 @@
 const searchModel = require('../models/search');
-const form = require('../helpers/form');
+const form = require('../helper/form');
 
 module.exports = {
     searchProduct: (req, res) => {

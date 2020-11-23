@@ -1,6 +1,6 @@
 const express = require('express');
 const productsRouter = express.Router();
-const db = require('../configs/mySQL');
+const db = require('../config/mySQL');
 
 // localhost:8000/products
 // GET

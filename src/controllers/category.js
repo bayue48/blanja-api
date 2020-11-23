@@ -1,5 +1,5 @@
 const searchModel = require('../models/category');
-const form = require('../helpers/form');
+const form = require('../helper/form');
 
 module.exports = {
     searchCategory: (req, res) => {

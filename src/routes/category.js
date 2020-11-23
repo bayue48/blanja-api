@@ -1,7 +1,7 @@
 const express = require('express');
 
 const categoryRouter = express.Router();
-const categoryController = require('../controllers/search');
+const categoryController = require('../controllers/category');
 // req.query
 
 // localhost:8000/category?{query}
