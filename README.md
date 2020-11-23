@@ -43,4 +43,4 @@ Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License.

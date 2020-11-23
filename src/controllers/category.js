@@ -1,4 +1,4 @@
-const searchModel = require('../models/category');
+const categoryModel = require('../models/category');
 const form = require('../helper/form');
 
 module.exports = {
@@ -6,7 +6,7 @@ module.exports = {
         const { q } = req.query
         const keyword = '%' + q + '%'
         
-        searchModel.searchCategory(keyword)
+        categoryModel.searchCategory(keyword)
             .then((data) => {
                 form.success(res, data)
                  // res.json(data);
