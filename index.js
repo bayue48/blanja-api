@@ -1,5 +1,6 @@
 const express = require('express');
 const logger = require('morgan');
+const bodyParser = require('body-parser');
 const mainRouter = require('./src/routes/index');
 const app = express();
 // inisialisasi port
@@ -14,14 +15,12 @@ app.listen(port, () => {
 app.use(logger('dev'));
 
 // menambahkan parser untuk x-www-form-urlencoded
-app.use(express.urlencoded({ 
-    extended: false 
-}));
+app.use(bodyParser.urlencoded({ extended: false }))
 // extended: false => menggunakan qs
 // extended: true => menggunakan querystring
 
 // menambahkan parser untuk raw json
-app.use(express.json());
+app.use(bodyParser.json())
 
 app.use('/', mainRouter);
 
