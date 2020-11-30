@@ -3,14 +3,13 @@ const mainRouter = express.Router();
 
 const welcomeRouter = require('./welcome');
 const productsRouter = require('./products');
-const productRouter = require('./product');
 const searchRouter = require('./search');
-const categoryRouter = require('./category');
+const historyRouter = require('./history');
 
-mainRouter.use('/', welcomeRouter); // localhost:8000
-mainRouter.use('/products', productsRouter); // localhost:8000/products
-mainRouter.use('/product', productRouter); // localhost:8000/product
-mainRouter.use('/search', searchRouter); // localhost:8000/search
-mainRouter.use('/category', categoryRouter); // localhost:8000/category
+
+mainRouter.use('/api/v2/', welcomeRouter); // localhost:8000
+mainRouter.use('/api/v2/products', productsRouter); // localhost:8000/products
+mainRouter.use('/api/v2/search', searchRouter); // localhost:8000/search
+mainRouter.use('/api/v2/history', historyRouter); // localhost:8000/history
 
 module.exports = mainRouter;
