@@ -34,7 +34,7 @@ Please create database and make the changes in the `/src/config/mySQL.js` file.
 `node index` OR `nodemon start` OR `npm start`
 
 Runs the app in the development mode.<br>
-Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
+Open [http://localhost:8000/api/v2/](http://localhost:8000/api/v2/) to view it in the browser.
 
 ### Endpoint
 
