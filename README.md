@@ -8,7 +8,7 @@ API build in [Express.js](https://expressjs.com/) and [MySQL](https://www.mysql.
 
 ### Prerequisites
 
-* [npm](https://nodejs.org/en/download/)
+- [npm](https://nodejs.org/en/download/)
   ```sh
   npm install npm@latest -g
   ```
@@ -29,14 +29,47 @@ API build in [Express.js](https://expressjs.com/) and [MySQL](https://www.mysql.
 
 Please create database and make the changes in the `/src/config/mySQL.js` file.
 
+```js 
+   host: YOUR_HOSTNAME,
+   user: YOUR_DBUSERNAME,
+   password: YOUR_DBPASSWORD,
+   database: YOUR_DBNAME,
+```
+
 ### Usage
 
 `node index` OR `nodemon start` OR `npm start`
 
 Runs the app in the development mode.<br>
-Open [http://localhost:8000/api/v2/](http://localhost:8000/api/v2/) to view it in the browser.
+Open [http://yourhostname:8000/api/v2/](http://yourhostname:8000/api/v2/) to view it in the browser.
 
 ### Endpoint
+
+- Get All Products
+```sh
+GET
+/api/v2/products
+```
+- Get Single Products
+```sh
+GET
+/api/v2/products/:id
+```
+- Add New Products
+```sh
+POST
+/api/v2/products
+```
+- Edit Existing Products
+```sh
+PATCH
+/api/v2/products/:id
+```
+- Delete Products
+```sh
+DELETE
+/api/v2/products/:id
+```
 
 ## License
 
