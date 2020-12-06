@@ -17,21 +17,21 @@ module.exports = {
           }
         }
         if(color !=null){
-          addQuery +=`color_id = ${color} `
+          addQuery +=`product_color = ${color} `
           if(initial != query_length){
             addQuery += `AND `
             initial +=1
           }
         }
         if(size != null){
-          addQuery +=`size_id = ${size} `
+          addQuery +=`product_size = ${size} `
           if(initial != query_length){
             addQuery += `AND `
             initial +=1
           }
         }
         if(category != null ){
-          addQuery += `category_id = ${category} `
+          addQuery += `product_category = ${category} `
           if(initial != query_length){
             addQuery += `AND `
             initial +=1
