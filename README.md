@@ -30,10 +30,10 @@ API build in [Express.js](https://expressjs.com/) and [MySQL](https://www.mysql.
 Please create database and make the changes in the `/src/config/mySQL.js` file.
 
 ```js 
-   host: YOUR_HOSTNAME,
-   user: YOUR_DBUSERNAME,
-   password: YOUR_DBPASSWORD,
-   database: YOUR_DBNAME,
+host: YOUR_HOSTNAME,
+user: YOUR_DBUSERNAME,
+password: YOUR_DBPASSWORD,
+database: YOUR_DBNAME,
 ```
 
 ### Usage
