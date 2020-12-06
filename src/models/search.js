@@ -1,4 +1,5 @@
 const db = require('../config/mySQL')
+
 module.exports = {
     searchBy: (keyword) => {
         return new Promise((resolve, reject) => {

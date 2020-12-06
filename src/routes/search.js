@@ -4,7 +4,7 @@ const searchRouter = express.Router();
 const searchController = require('../controllers/search');
 // req.query
 
-// localhost:8000/search?{query}
+// search?{query}
 searchRouter.get('/', searchController.searchBy);
 
 module.exports = searchRouter;
