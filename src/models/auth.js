@@ -78,7 +78,7 @@ module.exports = {
                 level: data[0].level_id,
               };
               const secret = process.env.SECRET_KEY;
-              const token = jwt.sign(payload, secret);
+              const token = jwt.sign(payload, secret, { expiresIn: '24h' });
               resolve({ token });
             }
           });

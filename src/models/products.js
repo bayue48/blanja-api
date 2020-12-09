@@ -25,10 +25,16 @@ module.exports = {
         });
     },
 
-    postNewProduct: (insertBody) => {
+    postNewProduct: (insertBody, level) => {
         return new Promise((resolve, reject) => {
             const qs = 'INSERT INTO products SET ?';
-            db.query(qs, insertBody, (err, data) => {
+            if (level > 1) {
+                reject({
+                    msg: 'Unauthorized Access',
+                    status: 401
+                })
+            }
+            db.query(qs, [insertBody, level], (err, data) => {
                 if (!err) {
                     resolve(data);
                 } else {
@@ -52,10 +58,16 @@ module.exports = {
         });
     },
 
-    updateProduct: (updateBody, id) => {
+    updateProduct: (updateBody, id, level) => {
         return new Promise((resolve, reject) => {
             const qs = 'UPDATE products SET ? WHERE id = ?';
-            db.query(qs, [updateBody, id], (err, data) => {
+            if (level > 1) {
+                reject({
+                    msg: "Unauthorized Access",
+                    status: 401
+                })
+            }
+            db.query(qs, [updateBody, id, level], (err, data) => {
                 if (!err) {
                     resolve(data);
                 } else {
@@ -65,10 +77,16 @@ module.exports = {
         });
     },
 
-    deleteProduct: (id) => {
+    deleteProduct: (id, level) => {
         return new Promise((resolve, reject) => {
             const qs = 'DELETE FROM products WHERE id = ?';
-            db.query(qs, id, (err, data) => {
+            if (level > 1) {
+                reject({
+                    msg: 'Unauthorized Access',
+                    status: 401
+                })
+            }
+            db.query(qs, [id, level], (err, data) => {
                 if (!err) {
                     resolve(data);
                 } else {

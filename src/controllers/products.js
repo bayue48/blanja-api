@@ -19,19 +19,19 @@ module.exports = {
                 addQuery += `ORDER BY ${sortBy} ASC`
             }
         }
-        
+
 
         productsModel.sortProduct(addQuery, limit, offset, page)
             .then((data) => {
                 if (Math.ceil(data.products / limit) == data.products) {
                     res.status(404).json({
-                      msg: "Data Not Found",
-                      status: 404,
+                        msg: 'Data Not Found',
+                        status: 404,
                     });
-                  } else {
+                } else {
                     form.success(res, data);
-                  }
-                })
+                }
+            })
             .catch((err) => {
                 form.error(res, err)
             })
@@ -41,13 +41,16 @@ module.exports = {
         const { body } = req;
         const insertBody = {
             ...body,
+            product_img: req.filePath,
             created_at: new Date(Date.now()),
             updated_at: new Date(Date.now()),
         };
+        const image = req.filePath.split(',')
         productsModel.postNewProduct(insertBody)
             .then((data) => {
                 form.success(res, {
                     msg: 'Product succesfully added',
+                    product_img: image,
                     data: { id: data.insertId, ...insertBody },
                 }
                 );
@@ -80,13 +83,15 @@ module.exports = {
         const { body } = req;
         const updateBody = {
             ...body,
+            product_img: req.filePath,
             updated_at: new Date(Date.now())
         };
-
+        const image = req.filePath.split(',')
         productsModel.updateProduct(updateBody, id)
             .then((data) => {
                 form.success(res, {
                     msg: 'Product succesfully updated',
+                    product_img: image,
                     data: { id: data.updateId, ...updateBody },
                 }
                 );
@@ -99,10 +104,9 @@ module.exports = {
     deleteProduct: (req, res) => {
         const { id } = req.params;
         productsModel.deleteProduct(id)
-            .then(data => {
+            .then(() => {
                 form.success(res, {
                     msg: 'Product succesfully deleted',
-                    data: { id: data.updateId }
                 },
                 );
             })

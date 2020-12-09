@@ -2,12 +2,14 @@ const express = require('express');
 
 const productsRouter = express.Router();
 const productsController = require('../controllers/products');
+const verifyToken = require('../middlewares/verifyToken')
+const multiUpload = require('../middlewares/upload')
 
 // localhost:8000/products
 productsRouter.get('/', productsController.sortProduct);
-productsRouter.post('/', productsController.postNewProduct);
+productsRouter.post('/', verifyToken, multiUpload, productsController.postNewProduct);
 productsRouter.get('/:id', productsController.getProductById);
-productsRouter.patch('/:id', productsController.updateProduct);
-productsRouter.delete('/:id', productsController.deleteProduct);
+productsRouter.patch('/:id', verifyToken, multiUpload, productsController.updateProduct);
+productsRouter.delete('/:id', verifyToken, productsController.deleteProduct);
 
 module.exports = productsRouter;

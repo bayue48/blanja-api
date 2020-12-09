@@ -9,7 +9,8 @@ module.exports = {
                 if (!err) {
                     if (Object.keys(data).length === 0) {
                         reject({
-                            msg: `data invalid`
+                            msg: `data not found`,
+                            status: 404,
                         })
                     }
                     resolve(data);

@@ -52,7 +52,7 @@ function checkFileType(file, cb) {
 // };
 
 const multiUpload = (req, res, next) => {
-    const uploadMulti = upload.array('image', 5);
+    const uploadMulti = upload.array('product_img', 5);
     uploadMulti(req, res, (err) => {
         if (err) {
             form.error(res, {
@@ -71,10 +71,10 @@ const multiUpload = (req, res, next) => {
             //         filePath,
             //     });
             // };
-            // let filePath = req.files.map((val) =>
-            //     "/images/" + val.filename
-            // )
-            // req.filePath = filePath.join(',')
+            let filePath = req.files.map((val) =>
+                '/images/' + val.filename
+            )
+            req.filePath = filePath.join(',')
             next();
         }
     });
