@@ -11,7 +11,6 @@ module.exports = {
     error: (res, err) => {
         const resObject = {
             success: false,
-            code: 500,
             err,
             };
             res.json(resObject);

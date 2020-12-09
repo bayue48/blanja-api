@@ -5,11 +5,16 @@ const welcomeRouter = require('./welcome');
 const productsRouter = require('./products');
 const searchRouter = require('./search');
 const historyRouter = require('./history');
+const authRouter = require('./auth');
+const imageUploadRouter = require('./imageUpload');
 
+const verifyToken = require('../middlewares/verifyToken');
 
-mainRouter.use('/api/v2/', welcomeRouter); // localhost:8000
-mainRouter.use('/api/v2/products', productsRouter); // localhost:8000/products
-mainRouter.use('/api/v2/search', searchRouter); // localhost:8000/search
-mainRouter.use('/api/v2/history', historyRouter); // localhost:8000/history
+mainRouter.use('/api/v2/', welcomeRouter);
+mainRouter.use('/api/v2/products', productsRouter);
+mainRouter.use('/api/v2/search', searchRouter);
+mainRouter.use('/api/v2/history', historyRouter);
+mainRouter.use('/api/v2/auth', authRouter);
+mainRouter.use('/api/v2/upload', imageUploadRouter);
 
 module.exports = mainRouter;

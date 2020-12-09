@@ -1,27 +1,32 @@
+require('dotenv').config();
+
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const mainRouter = require('./src/routes/index');
 const cors = require('cors');
-const app = express();
-// inisialisasi port
-const port = 8000;
+// cors => cross origin resource sharing
+const mainRouter = require('./src/routes/index');
 
+const app = express();
+// port initializtion
+const port = 8000;
 // listen port
 app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
 });
 
+app.use(express.static('public'));
+// allow access from all origin
 app.use(cors());
-// menambahkan logger
+// logger
 app.use(logger('dev'));
 
-// menambahkan parser untuk x-www-form-urlencoded
+// parser for x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-// extended: false => menggunakan qs
-// extended: true => menggunakan querystring
+// extended: false => use qs
+// extended: true => use querystring
 
-// menambahkan parser untuk raw json
+// parser for raw json
 app.use(bodyParser.json())
 
 app.use('/', mainRouter);

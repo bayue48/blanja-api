@@ -6,7 +6,6 @@ module.exports = {
         historyModel.getHistory()
             .then((data) => {
                 form.success(res, data)
-                 // res.json(data);
             })
             .catch((err) => {
                 form.error(res, err)
@@ -21,11 +20,11 @@ module.exports = {
         };
         historyModel.postHistory(insertBody)
             .then((data) => {
-                const resObject = {
-                    msg: 'Data succesfully inserted',
+                form.success(res, {
+                    msg: 'Transaction succesfully added',
                     data: { id: data.insertId, ...insertBody },
-                };
-                res.json(resObject);
+                }
+                );
             })
             .catch((err) => {
                 form.error(res, err)
