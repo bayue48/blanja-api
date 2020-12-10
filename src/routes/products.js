@@ -6,7 +6,8 @@ const verifyToken = require('../middlewares/verifyToken')
 const multiUpload = require('../middlewares/upload')
 
 // localhost:8000/products
-productsRouter.get('/', productsController.sortProduct);
+productsRouter.get('/', productsController.allProducts);
+productsRouter.get('/sort', productsController.sortProduct);
 productsRouter.post('/', verifyToken, multiUpload, productsController.postNewProduct);
 productsRouter.get('/:id', productsController.getProductById);
 productsRouter.patch('/:id', verifyToken, multiUpload, productsController.updateProduct);

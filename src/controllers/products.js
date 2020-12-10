@@ -21,8 +21,6 @@ module.exports = {
                 addQuery += `ORDER BY ${sortBy} ASC`
                 urlQuery = `sortBy=${sortBy}&orderBy=asc&`
             }
-        } else {
-            addQuery += `ORDER BY product_id ASC`
         }
 
         productsModel.sortProduct(addQuery, urlQuery, limit, offset, page)
@@ -41,7 +39,7 @@ module.exports = {
             })
     },
 
-    AllProducts: (req, res) => {
+    allProducts: (req, res) => {
         const { query } = req;
         const limit = Number(query.limit) || 5;
         const page = Number(query.page) || 1;

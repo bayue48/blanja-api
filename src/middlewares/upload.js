@@ -37,19 +37,19 @@ function checkFileType(file, cb) {
     }
 }
 
-// const singleUpload = (req, res, next) => {
-//     const uploadSingle = upload.single('image');
-//     uploadSingle(req, res, (err) => {
-//         if (err) {
-//             form.error(res, {
-//                 msg: 'Multer Error',
-//                 err,
-//             });
-//         } else {
-//             next();
-//         }
-//     });
-// };
+const singleUpload = (req, res, next) => {
+    const uploadSingle = upload.single('image');
+    uploadSingle(req, res, (err) => {
+        if (err) {
+            form.error(res, {
+                msg: 'Multer Error',
+                err,
+            });
+        } else {
+            next();
+        }
+    });
+};
 
 const multiUpload = (req, res, next) => {
     const uploadMulti = upload.array('product_img', 5);
@@ -80,4 +80,4 @@ const multiUpload = (req, res, next) => {
     });
 };
 
-module.exports = multiUpload
+module.exports = multiUpload, singleUpload

@@ -11,9 +11,9 @@ module.exports = {
                     pageInfo: {
                         currentPage: page,
                         previousPage:
-                            page === 1 ? null : `/api/v2/products/sort?${param2}&page=${page - 1}&limit=${limit}`,
+                            page === 1 ? null : `/api/v2/products/sort?${param2}page=${page - 1}&limit=${limit}`,
                         nextPage: page === limit !== data.length &&
-                            limit !== data.length ? null : `/api/v2/products/sort?${param2}&page=${page + 1}&limit=${limit}`,
+                            limit !== data.length ? null : `/api/v2/products/sort?${param2}page=${page + 1}&limit=${limit}`,
                     },
                 };
                 if (!err) {
