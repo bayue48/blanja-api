@@ -28,9 +28,30 @@ module.exports = {
         });
       })
       .catch((err) => {
-        form.error(res, err);
-      });
+        form.error(res, {
+          msg: 'Login Failed',
+          err
+        });
+      })
   },
 
-  logout: (req, res) => {}
-};
+  logout: (req, res) => {
+    const bearerToken = req.header('x-access-token');
+    if (!bearerToken) {
+      res.json({
+        msg: `token null!`
+      })
+    } else {
+      blacklistToken = {
+        token: bearerToken.split(' ')[1]
+      }
+
+      authModel.postLogout(blacklistToken)
+        .then((result) => {
+          form.success(res, result)
+        }).catch((error) => {
+          form.error(res, error)
+        })
+    }
+  }
+}

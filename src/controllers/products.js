@@ -11,17 +11,21 @@ module.exports = {
         const offset = (page - 1) * limit || 0;
 
         let addQuery = ``
+        let urlQuery = ``
 
         if (sortBy != null) {
             if (orderBy == `desc`) {
                 addQuery += `ORDER BY ${sortBy} DESC`
+                urlQuery = `sortBy=${sortBy}&orderBy=desc&`
             } else {
                 addQuery += `ORDER BY ${sortBy} ASC`
+                urlQuery = `sortBy=${sortBy}&orderBy=asc&`
             }
+        } else {
+            addQuery += `ORDER BY product_id ASC`
         }
 
-
-        productsModel.sortProduct(addQuery, limit, offset, page)
+        productsModel.sortProduct(addQuery, urlQuery, limit, offset, page)
             .then((data) => {
                 if (Math.ceil(data.products / limit) == data.products) {
                     res.status(404).json({
@@ -33,6 +37,27 @@ module.exports = {
                 }
             })
             .catch((err) => {
+                form.error(res, err)
+            })
+    },
+
+    AllProducts: (req, res) => {
+        const { query } = req;
+        const limit = Number(query.limit) || 5;
+        const page = Number(query.page) || 1;
+        const offset = (page - 1) * limit || 0;
+
+        productsModel.allProducts(limit, offset, page)
+            .then((data) => {
+                if (Math.ceil(data.products / limit) == data.products) {
+                    res.status(404).json({
+                        msg: "Page Not Found",
+                        status: 404,
+                    });
+                } else {
+                    form.success(res, data)
+                }
+            }).catch((err) => {
                 form.error(res, err)
             })
     },

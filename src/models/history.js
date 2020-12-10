@@ -14,11 +14,17 @@ module.exports = {
              });
         });
     },
-    postHistory: (inserBody) => {
+    postHistory: (inserBody, level) => {
         return new Promise((resolve, reject) => {
             const qs =
                 'INSERT INTO transactions_history SET ?';
-            db.query(qs, inserBody, (err, data) => {
+                if (level > 2) {
+                    reject({
+                        msg: 'Unauthorized Access',
+                        status: 401
+                    })
+                }
+            db.query(qs, [inserBody, level], (err, data) => {
                 if (!err) {
                     resolve(data);
                 } else {

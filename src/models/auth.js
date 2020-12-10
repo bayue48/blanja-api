@@ -86,4 +86,21 @@ module.exports = {
       });
     });
   },
-};
+
+  postLogout: (blacklistToken) => {
+    return new Promise((resolve, reject) => {
+        const queryStr = 'INSERT INTO blacklist SET ?'
+        db.query(queryStr, blacklistToken, (err, data) => {
+            if (!err) {
+                resolve({
+                    msg: `Logout succesful`,
+                })
+            } else {
+                reject({
+                    msg: `Logout Failed`
+                })
+            }
+        })
+    })
+}
+}
