@@ -80,4 +80,4 @@ const multiUpload = (req, res, next) => {
     });
 };
 
-module.exports = multiUpload, singleUpload
+module.exports = multiUpload
