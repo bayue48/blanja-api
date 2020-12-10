@@ -71,6 +71,10 @@ DELETE
 /api/v2/products/:id
 ```
 
+### Documentation
+
+For more info visit [Postman](https://www.getpostman.com/collections/dda96d38e1a9ca33d15d)
+
 ## License
 
 Distributed under the MIT License.

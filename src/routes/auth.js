@@ -5,6 +5,6 @@ const verifyUser = require('../middlewares/verifyUser')
 
 authRouter.post('/register', authController.register);
 authRouter.post('/login', authController.login);
-authRouter.post('/logout', verifyUser.isLogin, authController.logout);
+authRouter.post('/logout', verifyUser, authController.logout);
 
 module.exports = authRouter;
