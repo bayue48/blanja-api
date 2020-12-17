@@ -73,7 +73,7 @@ DELETE
 
 ### Documentation
 
-For more info visit [Postman](https://www.getpostman.com/collections/dda96d38e1a9ca33d15d)
+For more info visit [Postman](https://documenter.getpostman.com/view/13522642/TVmTdFLj#328f5097-2f0b-4bf4-82de-1757f82c6ac5)
 
 ## License
 
