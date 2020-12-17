@@ -9,7 +9,7 @@ module.exports = {
       .then(() => {
         form.success(res, {
           msg: 'Registration Successfull',
-          username: body.username,
+          email: body.email,
         });
       })
       .catch((err) => {
@@ -39,19 +39,21 @@ module.exports = {
     const bearerToken = req.header('x-access-token');
     if (!bearerToken) {
       res.json({
-        msg: `token null!`
-      })
+        msg: `token null!`,
+      });
     } else {
       blacklistToken = {
-        token: bearerToken.split(' ')[1]
-      }
+        token: bearerToken.split(' ')[1],
+      };
 
-      authModel.postLogout(blacklistToken)
+      authModel
+        .postLogout(blacklistToken)
         .then((result) => {
-          form.success(res, result)
-        }).catch((error) => {
-          form.error(res, error)
+          form.success(res, result);
         })
+        .catch((error) => {
+          form.error(res, error);
+        });
     }
-  }
-}
+  },
+};

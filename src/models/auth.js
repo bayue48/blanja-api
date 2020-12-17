@@ -39,9 +39,9 @@ module.exports = {
     // sign => get token from payload
     // sent token to client
     return new Promise((resolve, reject) => {
-      const { username, password } = body;
-      const qs = 'SELECT password, level_id FROM users WHERE username = ?';
-      db.query(qs, username, (err, data) => {
+      const { email, password } = body;
+      const qs = 'SELECT password, level_id FROM users WHERE email = ?';
+      db.query(qs, email, (err, data) => {
         // Handle Error SQL
         if (err) {
           reject({
@@ -74,7 +74,7 @@ module.exports = {
               });
             } else {
               const payload = {
-                username,
+                email,
                 level: data[0].level_id,
               };
               const secret = process.env.SECRET_KEY;
@@ -89,18 +89,18 @@ module.exports = {
 
   postLogout: (blacklistToken) => {
     return new Promise((resolve, reject) => {
-        const queryStr = 'INSERT INTO blacklist SET ?'
-        db.query(queryStr, blacklistToken, (err, data) => {
-            if (!err) {
-                resolve({
-                    msg: `Logout succesful`,
-                })
-            } else {
-                reject({
-                    msg: `Logout Failed`
-                })
-            }
-        })
+      const qs = 'INSERT INTO blacklist SET ?'
+      db.query(qs, blacklistToken, (err, data) => {
+        if (!err) {
+          resolve({
+            msg: `Logout succesful`,
+          })
+        } else {
+          reject({
+            msg: `Logout Failed`
+          })
+        }
+      })
     })
-}
+  }
 }

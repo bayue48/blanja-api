@@ -3,7 +3,7 @@ const form = require('../helper/form')
 
 module.exports = {
   searchBy: (req, res) => {
-    const { name, color, size, category } = req.query;
+    const { name, color, size, brand, category } = req.query;
     let addQuery = ``
     let query_length = Object.keys(req.query).length - 1
     let initial = 0
@@ -25,6 +25,13 @@ module.exports = {
       }
       if (size != null) {
         addQuery += `product_size = ${size} `
+        if (initial != query_length) {
+          addQuery += `AND `
+          initial += 1
+        }
+      }
+      if (brand != null) {
+        addQuery += `product_brand like '%${brand}%' `
         if (initial != query_length) {
           addQuery += `AND `
           initial += 1

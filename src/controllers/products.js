@@ -2,13 +2,16 @@ const productsModel = require('../models/products');
 const form = require('../helper/form');
 
 module.exports = {
-    sortProduct: (req, res) => {
+    allProducts: (req, res) => {
         const { sortBy, orderBy } = req.query;
         const { query } = req;
 
-        const limit = Number(query.limit) || 5;
+        const limit = Number(query.limit) || 15;
         const page = Number(query.page) || 1;
         const offset = (page - 1) * limit || 0;
+
+        // let query_length = Object.keys(req.query).length - 1
+        // let initial = 0
 
         let addQuery = ``
         let urlQuery = ``
@@ -23,7 +26,46 @@ module.exports = {
             }
         }
 
-        productsModel.sortProduct(addQuery, urlQuery, limit, offset, page)
+        // if (Object.keys(req.query).length) {
+        //     addQuery += `WHERE `
+        //     if (name != null) {
+        //       addQuery += `product_name like '%${name}%' `
+        //       if (initial != query_length) {
+        //         addQuery += `AND `
+        //         initial += 1
+        //       }
+        //     }
+        //     if (color != null) {
+        //       addQuery += `product_color = ${color} `
+        //       if (initial != query_length) {
+        //         addQuery += `AND `
+        //         initial += 1
+        //       }
+        //     }
+        //     if (size != null) {
+        //       addQuery += `product_size = ${size} `
+        //       if (initial != query_length) {
+        //         addQuery += `AND `
+        //         initial += 1
+        //       }
+        //     }
+        //     if (brand != null) {
+        //         addQuery += `product_brand like '%${brand}%' `
+        //         if (initial != query_length) {
+        //           addQuery += `AND `
+        //           initial += 1
+        //         }
+        //       }
+        //     if (category != null) {
+        //       addQuery += `product_category = ${category} `
+        //       if (initial != query_length) {
+        //         addQuery += `AND `
+        //         initial += 1
+        //       }
+        //     }
+        //   }
+
+        productsModel.allProducts(addQuery, urlQuery, limit, offset, page)
             .then((data) => {
                 if (Math.ceil(data.products / limit) == data.products) {
                     res.status(404).json({
@@ -39,26 +81,26 @@ module.exports = {
             })
     },
 
-    allProducts: (req, res) => {
-        const { query } = req;
-        const limit = Number(query.limit) || 5;
-        const page = Number(query.page) || 1;
-        const offset = (page - 1) * limit || 0;
+    // allProducts: (req, res) => {
+    //     const { query } = req;
+    //     const limit = Number(query.limit) || 5;
+    //     const page = Number(query.page) || 1;
+    //     const offset = (page - 1) * limit || 0;
 
-        productsModel.allProducts(limit, offset, page)
-            .then((data) => {
-                if (Math.ceil(data.products / limit) == data.products) {
-                    res.status(404).json({
-                        msg: "Page Not Found",
-                        status: 404,
-                    });
-                } else {
-                    form.success(res, data)
-                }
-            }).catch((err) => {
-                form.error(res, err)
-            })
-    },
+    //     productsModel.allProducts(limit, offset, page)
+    //         .then((data) => {
+    //             if (Math.ceil(data.products / limit) == data.products) {
+    //                 res.status(404).json({
+    //                     msg: "Page Not Found",
+    //                     status: 404,
+    //                 });
+    //             } else {
+    //                 form.success(res, data)
+    //             }
+    //         }).catch((err) => {
+    //             form.error(res, err)
+    //         })
+    // },
 
     postNewProduct: (req, res) => {
         const { body } = req;
