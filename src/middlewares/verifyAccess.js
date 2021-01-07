@@ -78,7 +78,7 @@ module.exports = {
     isSeller: (req, res, next) => {
         const { level } = req.decodedToken
         if (level != 2) {
-            res.status(401).jason({
+            res.status(401).json({
                 msg: `Unauthorized Access`,
                 details: `Yout dont have permission to access this page.`
             })
