@@ -21,38 +21,4 @@ productsRouter.get("/get_color/:id", productsController.getColorId)
 
 productsRouter.get("/getByUser/:user_id", productsController.getByUser)
 
-productsRouter.get('/all_prod',(req, res) => {
-    return new Promise ((resolve, reject) => {
-        const queryStr = `SELECT * FROM products`
-        db.query(queryStr, (err, data) => {
-            if(!err){
-                resolve(data)
-            }else{
-                reject(err)
-            }
-        })
-    }).then((result) => {
-        res.json(result)
-    }).catch((error) => {
-        console.log(error)
-    })
-})
-
-productsRouter.get('/all_ctg', (req,res) => {
-    const get_Cat = new Promise (( resolve, reject ) => {
-        const queryStr = 'SELECT * FROM category'
-        db.query(queryStr, (err, data) => {
-            if(!err){
-                resolve(data)
-            }else{
-                reject(err)
-            }
-        })
-    }).then((result) => {
-        res.json(result)
-    }).catch((error) => {
-        console.log(error)
-    })
-})
-
 module.exports = productsRouter;
