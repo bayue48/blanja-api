@@ -2,16 +2,20 @@ require('dotenv').config();
 
 const express = require('express');
 const logger = require('morgan');
+const app = express();
+const port = 8000;
+const http = require('http')
+const socketio = require("socket.io")
+const server = http.createServer(app)
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const io = socketio(server);
 // cors => cross origin resource sharing
 const mainRouter = require('./src/routes/index');
 
-const app = express();
 // port initializtion
-const port = 8000;
 // listen port
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Server is running at port ${port}`);
 });
 
@@ -30,5 +34,15 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use('/', mainRouter);
+
+io.on("connection", (socket) => {
+    console.log("a user connected :D");
+    socket.on("chat message", (msg) => {
+      console.log(msg);
+      io.emit("chat message", msg);
+    });
+  });
+  
+  
 
 module.exports = app;

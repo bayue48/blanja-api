@@ -31,7 +31,7 @@ module.exports = {
         }
       }
       if (color != null) {
-        addQuery += `color_id = ${color} `
+        addQuery += `product_color = ${color} `
         urlQuery += `color=${color}`
         urlQuery += `&`
         if (initial != query_length) {
@@ -40,7 +40,7 @@ module.exports = {
         }
       }
       if (size != null) {
-        addQuery += `size_id = ${size} `
+        addQuery += `product_size = ${size} `
         urlQuery += `size=${size}`
         urlQuery += `&`
         if (initial != query_length) {
@@ -49,7 +49,7 @@ module.exports = {
         }
       }
       if (category != null) {
-        addQuery += `category_id = ${category} `
+        addQuery += `product_category = ${category} `
         urlQuery += `category=${category}`
         urlQuery += `&`
         if (initial != query_length) {
