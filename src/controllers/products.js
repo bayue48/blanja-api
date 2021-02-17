@@ -222,16 +222,16 @@ module.exports = {
     const { body } = req;
     const updateBody = {
       ...body,
-      product_img: req.filePath,
+      // product_img: req.filePath,
       updated_at: new Date(Date.now()),
     };
-    const image = req.filePath.split(",");
+    // const image = req.filePath.split(",");
     productsModel
       .updateProduct(updateBody, id)
       .then((data) => {
         form.success(res, {
           msg: "Product succesfully updated",
-          product_img: image,
+          // product_img: image,
           data: { id: data.updateId, ...updateBody },
         });
       })
