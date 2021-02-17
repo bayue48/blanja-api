@@ -38,10 +38,7 @@ module.exports = {
             };
             resolve(newData);
           } else {
-            reject({
-              status: 404,
-              msg: "data tidak ditemukan",
-            });
+            reject(err);
           }
         } else {
           reject({

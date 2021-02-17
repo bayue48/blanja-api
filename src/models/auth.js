@@ -99,8 +99,8 @@ module.exports = {
                       name: data[0].name,
                       email: email,
                       img: data[0].img,
-                      level_id: data[0].level_id,
-                      tokenId: token,
+                      level: data[0].level_id,
+                      token: token,
                     });
                   } else {
                     reject("Please verify your account first!");
