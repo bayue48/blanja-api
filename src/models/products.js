@@ -147,7 +147,7 @@ module.exports = {
             JOIN categories c ON p.product_category = c.id 
             JOIN colors pc ON p.product_color = pc.id 
             JOIN sizes s ON p.product_size = s.id 
-            WHERE p.user_id = ? ORDER BY p.created_at DESC`;
+            WHERE p.user_id = ? ORDER BY p.updated_at DESC`;
       db.query(qs, user_id, (err, data) => {
         if (!err) {
           resolve(data);

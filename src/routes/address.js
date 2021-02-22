@@ -6,5 +6,6 @@ addressRouter.post("/", addressController.addAddress)
 addressRouter.patch("/:id", addressController.changeAddress )
 addressRouter.get("/:userId", addressController.getAddress)
 addressRouter.get("/get/:id", addressController.getAddressId)
+addressRouter.delete("/:id",  addressController.deleteAdress)
 
 module.exports = addressRouter

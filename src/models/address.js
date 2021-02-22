@@ -86,5 +86,24 @@ module.exports = {
                 }
             })
         })
-    }
+    },
+    deleteAddressId: (id) => {
+        return new Promise((resolve, reject) => {
+            const queryStr = `DELETE FROM address WHERE id = ?`
+            db.query(queryStr, id, (err, data) => {
+                if (!err) {
+                    resolve({
+                        status: 200,
+                        message: 'alamat berhasil dihapus'
+                    })
+                } else {
+                    reject({
+                        status: 500,
+                        message: err
+                    })
+                }
+            })
+
+        })
+    },
 }

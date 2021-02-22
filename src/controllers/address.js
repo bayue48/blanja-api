@@ -37,5 +37,14 @@ module.exports = {
         }).catch((error) =>{
             res.status(error.status).json(err)
         })
+    },
+    deleteAdress: (req, res) =>{
+        const {id} = req.params
+        addressModel.deleteAddressId(id)
+        .then((result) =>{
+            res.status(200).json(result)
+        }).catch((error) =>{
+            res.status(error.status).json(error)
+        })
     }
 }

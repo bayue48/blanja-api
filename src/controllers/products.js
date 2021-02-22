@@ -3,6 +3,7 @@ const getModel = require("../models/products");
 const getSizeModel = require("../models/products");
 const getColorModel = require("../models/products");
 const form = require("../helper/form");
+const fs = require("fs");
 
 module.exports = {
   // allProducts: (req, res) => {
@@ -220,24 +221,45 @@ module.exports = {
   updateProduct: (req, res) => {
     const { id } = req.params;
     const { body } = req;
-    const updateBody = {
-      ...body,
-      // product_img: req.filePath,
-      updated_at: new Date(Date.now()),
-    };
-    // const image = req.filePath.split(",");
-    productsModel
-      .updateProduct(updateBody, id)
-      .then((data) => {
-        form.success(res, {
-          msg: "Product succesfully updated",
-          // product_img: image,
-          data: { id: data.updateId, ...updateBody },
+    if (req.filePath !== "") {
+      const updateBody = {
+        ...body,
+        product_img: req.filePath,
+        updated_at: new Date(Date.now()),
+      };
+      const image = req.filePath.split(",");
+      productsModel
+        .updateProduct(updateBody, id)
+        .then((data) => {
+          form.success(res, {
+            msg: "Product succesfully updated",
+            product_img: image,
+            data: { id: data.updateId, ...updateBody },
+          });
+        })
+        .catch((err) => {
+          form.error(res, err);
         });
-      })
-      .catch((err) => {
-        form.error(res, err);
-      });
+    } else {
+      const updateBody = {
+        ...body,
+        // product_img: req.filePath,
+        updated_at: new Date(Date.now()),
+      };
+      // const image = req.filePath.split(",");
+      productsModel
+        .updateProduct(updateBody, id)
+        .then((data) => {
+          form.success(res, {
+            msg: "Product succesfully updated",
+            // product_img: image,
+            data: { id: data.updateId, ...updateBody },
+          });
+        })
+        .catch((err) => {
+          form.error(res, err);
+        });
+    }
   },
 
   // editProductimages: (req, res) => {

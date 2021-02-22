@@ -21,7 +21,7 @@ mainRouter.use('/history', historyRouter);
 mainRouter.use('/auth', authRouter);
 mainRouter.use('/upload', imageUploadRouter);
 mainRouter.use("/address", addressRouter)
-mainRouter.use("/user", userRouter)
+mainRouter.use("/users", userRouter)
 mainRouter.use("/transactions", trxRouter) //Trx
 
 module.exports = mainRouter;
