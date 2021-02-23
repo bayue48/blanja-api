@@ -361,7 +361,6 @@ module.exports = {
                                   line-height: 18px;
                                 "
                               >
-                              <p style="margin: 0;">Jl. Kemuning Raya No. 1 RT/RW 012/02 Utan Kayu Utara, Kec. Matraman – Jakarta Timur</p>
                               </td>
                             </tr>
                           </table>
@@ -839,7 +838,6 @@ module.exports = {
                               line-height: 18px;
                             "
                           >
-                          <p style="margin: 0;">Jl. Kemuning Raya No. 1 RT/RW 012/02 Utan Kayu Utara, Kec. Matraman – Jakarta Timur</p>
                           </td>
                         </tr>
                       </table>
