@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2021 at 07:56 AM
+-- Generation Time: Feb 23, 2021 at 06:06 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -45,7 +45,9 @@ CREATE TABLE `address` (
 --
 
 INSERT INTO `address` (`id`, `name`, `address_name`, `street`, `city`, `zip`, `phone`, `user_id`, `created_at`, `updated_at`) VALUES
-(9, 'Erich', 'Home', 'Jl. Gajah Mada Gg. Merdeka No. 897', 'Tuban', '62315', 6281232123287, 15, '2021-02-17 16:46:19', '2021-02-17 16:46:19');
+(9, 'Erich', 'Home', 'Jl. Gajah Mada Gg. Merdeka No. 897', 'Tuban', '62315', 6281232123287, 15, '2021-02-17 16:46:19', '2021-02-17 16:46:19'),
+(10, 'Bayu', 'House', '75 Moreland St', 'Grantville', '30220', 6281232123287, 15, '2021-02-22 12:54:51', '2021-02-22 12:54:51'),
+(11, 'Angga', 'Office', '75 Moreland St', 'Grantville', '30220', 6281232123287, 15, '2021-02-22 12:57:14', '2021-02-22 12:57:14');
 
 -- --------------------------------------------------------
 
@@ -70,7 +72,22 @@ INSERT INTO `blacklist` (`id`, `token`) VALUES
 (5, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJ0ZXN0IiwiaWF0IjoxNjEzMzUzNzMyfQ.FxoMTWC35Eyso_8ysnjXRJ3M2VzDiLD5f9PfSs_cv10'),
 (6, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJ0ZXN0IiwiaWF0IjoxNjEzMzU2OTMxfQ.bILpi-4qgjsr2x5W5uwNTXKt3GtJVyZVaOXKkVYgggY'),
 (7, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJ0ZXN0IiwiaWF0IjoxNjEzNDQ0NzQ3fQ.CFCbRZdSQdbIp2YRSLgmfOZIQzCNhXB-Z6V_6P0Tdd4'),
-(8, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJ0ZXN0IiwiaWF0IjoxNjEzNDQ1NDU5fQ.t-vquWzPSOjkUgrpbCLNLH3Nc9Dj2BGHK2teCsYNjgs');
+(8, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJ0ZXN0IiwiaWF0IjoxNjEzNDQ1NDU5fQ.t-vquWzPSOjkUgrpbCLNLH3Nc9Dj2BGHK2teCsYNjgs'),
+(9, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJ0ZXN0IiwiaWF0IjoxNjEzNTQ2NDIyfQ.iax1k15Fw_418I62LpIYhlOZ9acjArMzNzOQg6Bcw8Y'),
+(10, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiIiLCJpYXQiOjE2MTM5OTQxNDN9.0U2reaoKF8pH7LsxlJ7w9uByTm09X2VhRRQor00Ycio'),
+(11, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjEzOTk4MTYyfQ.ujOGUFxYG9L8Qq4mVzxYFP8yFjAammWQLqY7fR2Mr-Y'),
+(12, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjEzOTk5NDMyfQ.CE6jhU2nZZSKp8N1PRn1PasGf6ZHNPFvNhbtY4ldCko'),
+(13, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjEzOTk5ODAwfQ.GafV_qlKpYZNUq-5c-mkJuS5mhZ6E7VEEBHCxhH0laU'),
+(14, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjEzOTk5ODgwfQ.Mt2sB8MI5e_-m1LWMVcOFGKfVfv2t0JeJ2dBOSqiJY0'),
+(15, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjE0MDAwMDAxfQ.pDJIJLj-btRvuwIOGNBXb3EQiQAfMSD26gGRK_CmyXo'),
+(16, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjE0MDAwMDgxfQ.d5-wnynjcvk2jSyMsnVsRvvprwVPbdEw39FMYMrpFt4'),
+(17, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjE0MDAwMTQ2fQ.Z50SCIBIoJVO7fvr_3YNPIgO13e8Nvep7j0fwJC9Vi8'),
+(18, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjE0MDAwMTg2fQ.J0JS6bzaa2qLQLn8Ib06bhKDfdNts9hwVRlC6fNKABE'),
+(19, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJUZXN0IiwiaWF0IjoxNjE0MDExODA4fQ.oU6TlBrmcg4iaTpGMbdBvuFs-w_jfohmdArH-kkVoxg'),
+(20, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcsIm5hbWUiOiJDb2JhIiwiaWF0IjoxNjE0MDIzMDc2fQ.vJX0sium5QfJODezshGe6CDCUjj0gORq_Dwg4-qRNOw'),
+(21, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcsIm5hbWUiOiJDb2JhIiwiaWF0IjoxNjE0MDIzMjI2fQ.rwVtZDPjbC_VrnTbcyxPzlqe_bhjlTlpO0WMIloNLqk'),
+(22, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcsIm5hbWUiOiJDb2JhIiwiaWF0IjoxNjE0MDIzOTQ5fQ.uGHNf5PRy1vOrYA-gF5rsTLvG9K7ngFW3h7YagY80ec'),
+(23, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcsIm5hbWUiOiJDb2JhIiwiaWF0IjoxNjE0MDI0MDI4fQ.AdqM6rdXbnZ9hIB2m0CxschscAi-g0kl8PXO8gaCp38');
 
 -- --------------------------------------------------------
 
@@ -139,45 +156,52 @@ CREATE TABLE `invoice` (
   `user_id` int(11) DEFAULT NULL,
   `qty` int(11) NOT NULL,
   `price` int(11) DEFAULT NULL,
-  `payment` varchar(211) NOT NULL
+  `payment` varchar(211) NOT NULL,
+  `o_status` int(11) NOT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `invoice`
 --
 
-INSERT INTO `invoice` (`id`, `invoice_id`, `user_id`, `qty`, `price`, `payment`) VALUES
-(2, 'INV/2021/23/w8Mfwg', 23, 2, 50000, 'paypal'),
-(3, 'INV/2021/23/mgLHwR', 23, 2, 50000, 'mastercard'),
-(4, 'INV/2021/21/91G8MX', 21, 3, 654000, ''),
-(5, 'INV/2021/23/ATOqVs', 23, 4, 300000, 'mastercard'),
-(6, 'INV/2021/23/vwxUEq', 23, 5, 1150000, 'stripe'),
-(7, 'INV/2021/23/rx3LRN', 23, 1, 75000, 'mastercard'),
-(8, 'INV/2021/23/1yqzZy', 23, 1, 500000, 'paypal'),
-(9, 'INV/2021/23/kmxGOx', 23, 2, 150000, 'paypal'),
-(10, 'INV/2021/23/CnwF7V', 23, 3, 225000, 'mastercard'),
-(11, 'INV/2021/23/o01Vp6', 23, 4, 300000, 'mastercard'),
-(12, 'INV/2021/23/5s2aTw', 23, 5, 375000, 'mastercard'),
-(13, 'INV/2021/21/dnVSJ4', 21, 5, 375000, ''),
-(14, 'INV/2021/23/NA66MA', 23, 2, 150000, 'paypal'),
-(15, 'INV/2021/23/4v8gWN', 23, 2, 150000, 'stripe'),
-(16, 'INV/2021/23/w54sjw', 23, 2, 150000, 'google'),
-(17, 'INV/2021/23/jrG6yE', 23, 2, 150000, 'google'),
-(18, 'INV/2021/31/iq5Rgt', 31, 3, 225000, 'mastercard'),
-(19, 'INV/2021/23/1KzDY7', 23, 3, 140800, 'Apple pay'),
-(20, 'INV/2021/23/GhhjtD', 23, 1, 32900, 'Mastercard'),
-(21, 'INV/2021/21/uXjufK', 21, 3, 1512000, 'Apple pay'),
-(22, 'INV/2021/43/Gr283Z', 43, 2, 150000, 'Mastercard'),
-(23, 'INV/2021/44/yuJduV', 44, 2, 903000, 'Paypal'),
-(25, 'INV/2021/1/3/BKB4JC', 15, 6, 2100000, 'Mastercard'),
-(26, 'INV/2021/1/3/W52CDH', 15, 1, 300000, 'POS'),
-(27, 'INV/2021/1/3/8F4C2Y', 15, 1, 300000, 'POS'),
-(28, 'INV/2021/1/3/3VV7D4', 15, 5, 1500000, 'Gopay'),
-(29, 'INV/2021/1/3/4U3V5V', 15, 2, 600000, 'Mastercard'),
-(30, 'INV/2021/1/3/JFKHEA', 15, 1, 250000, 'Gopay'),
-(31, 'INV/2021/1/3/81D002', 15, 2, 600000, 'POS'),
-(32, 'INV/2021/1/3/9HF7J2', 15, 1, 300000, 'POS'),
-(33, 'INV/2021/1/3/ZREOXP', 15, 2, 650000, 'Mastercard');
+INSERT INTO `invoice` (`id`, `invoice_id`, `user_id`, `qty`, `price`, `payment`, `o_status`, `created`, `updated`) VALUES
+(25, 'INV/2021/1/3/BKB4JC', 15, 6, 2100000, 'Mastercard', 1, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(26, 'INV/2021/1/3/W52CDH', 15, 1, 300000, 'POS', 2, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(27, 'INV/2021/1/3/8F4C2Y', 15, 1, 300000, 'POS', 1, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(28, 'INV/2021/1/3/3VV7D4', 15, 5, 1500000, 'Gopay', 3, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(29, 'INV/2021/1/3/4U3V5V', 15, 2, 600000, 'Mastercard', 1, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(30, 'INV/2021/1/3/JFKHEA', 15, 1, 250000, 'Gopay', 2, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(31, 'INV/2021/1/3/81D002', 15, 2, 600000, 'POS', 2, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(32, 'INV/2021/1/3/9HF7J2', 15, 1, 300000, 'POS', 1, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(33, 'INV/2021/1/3/ZREOXP', 15, 2, 650000, 'Mastercard', 3, '2021-02-22 00:00:00', '2021-02-22 13:13:29'),
+(34, 'INV/2021/1/22/4LAZ5F', 15, 2, 449999, 'POS', 3, '2021-02-22 00:00:00', '2021-02-22 15:25:56'),
+(35, 'INV/2021/1/22/TV76HL', 15, 1, 634736, 'Mastercard', 3, '2021-02-22 00:00:00', '2021-02-22 15:28:08'),
+(36, 'INV/2021/1/22/GGLS0H', 15, 1, 300000, 'Mastercard', 2, '2021-02-22 00:00:00', '2021-02-22 15:36:47'),
+(37, 'INV/2021/1/22/CZTBEB', 15, 1, 100000, 'POS', 1, '2021-02-22 00:00:00', '2021-02-22 21:33:33');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item_order`
+--
+
+CREATE TABLE `item_order` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `color` varchar(255) NOT NULL,
+  `size` varchar(255) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `product_img` varchar(255) NOT NULL,
+  `invoive_id` varchar(255) NOT NULL,
+  `payment` int(11) NOT NULL,
+  `address` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `isReviewed` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -201,22 +225,45 @@ INSERT INTO `levels` (`id`, `level_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `order_status`
+--
+
+CREATE TABLE `order_status` (
+  `id` int(11) NOT NULL,
+  `status_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `order_status`
+--
+
+INSERT INTO `order_status` (`id`, `status_name`) VALUES
+(1, 'Order Placed'),
+(2, 'On Process'),
+(3, 'Delivered');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `otp`
 --
 
 CREATE TABLE `otp` (
   `id` int(11) NOT NULL,
-  `otp` int(11) NOT NULL
+  `otp` int(11) NOT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `otp`
 --
 
-INSERT INTO `otp` (`id`, `otp`) VALUES
-(0, 250894),
-(0, 202435),
-(0, 842725);
+INSERT INTO `otp` (`id`, `otp`, `created`) VALUES
+(14, 659489, '2021-02-23 11:33:10'),
+(15, 445086, '2021-02-23 11:50:42'),
+(16, 333415, '2021-02-23 11:50:56'),
+(17, 289061, '2021-02-23 12:03:47'),
+(18, 255743, '2021-02-23 12:05:16');
 
 -- --------------------------------------------------------
 
@@ -236,8 +283,8 @@ CREATE TABLE `products` (
   `product_color` int(11) DEFAULT 1,
   `product_size` int(11) DEFAULT 1,
   `product_qty` int(11) DEFAULT 1,
-  `product_img` mediumtext NOT NULL,
-  `product_condition` varchar(255) DEFAULT 'New',
+  `product_img` mediumtext DEFAULT NULL,
+  `product_condition` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -267,10 +314,9 @@ INSERT INTO `products` (`id`, `user_id`, `product_name`, `product_brand`, `produ
 (27, 1, 'Kaos Garis Lengan Panjang', 'Adidas', 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis. Etiam tincidunt tristique placerat. Pellentesque a consequat mauris, vel suscipit ipsum. \r\nDonec ac mauris vitae diam commodo vehicula. Donec quam elit, sollicitudin eu nisl at, ornare suscipit magna.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis.\r\n\r\nIn ultricies rutrum tempus. Mauris vel molestie orci.', 1, 300000, 1, 3, 3, '/images/product_img-1609980760340.png', 'New', '2021-01-07 07:52:40', '2021-01-07 07:52:40'),
 (28, 1, 'Kaos Oblong Pria', 'Adidas', 5, 'Kaos Super Langka Limited Edition', 1, 300000, 1, 3, 3, '/images/product_img-1609980786615.png', 'New', '2021-01-07 07:53:06', '2021-01-07 07:53:06'),
 (29, 1, 'Jacket Wanita', 'Adidas', 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis. Etiam tincidunt tristique placerat. Pellentesque a consequat mauris, vel suscipit ipsum. \r\nDonec ac mauris vitae diam commodo vehicula. Donec quam elit, sollicitudin eu nisl at, ornare suscipit magna.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis.\r\n\r\nIn ultricies rutrum tempus. Mauris vel molestie orci.', 3, 300000, 1, 3, 3, '/images/product_img-1609980809832.png', 'New', '2021-01-07 07:53:29', '2021-01-07 07:53:29'),
-(30, 15, 'Baju Dress Wanita', 'Adidas', 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis. Etiam tincidunt tristique placerat. Pellentesque a consequat mauris, vel suscipit ipsum. \r\nDonec ac mauris vitae diam commodo vehicula. Donec quam elit, sollicitudin eu nisl at, ornare suscipit magna.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis.\r\n\r\nIn ultricies rutrum tempus. Mauris vel molestie orci.', 14, 350000, 1, 3, 3, '/images/product_img-1609980853835.png', 'New', '2021-01-07 07:54:13', '2021-01-07 07:54:13'),
+(30, 15, 'Baju Dress Wanita', 'Hololive', 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis. Etiam tincidunt tristique placerat. Pellentesque a consequat mauris, vel suscipit ipsum. \r\nDonec ac mauris vitae diam commodo vehicula. Donec quam elit, sollicitudin eu nisl at, ornare suscipit magna.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis.\r\n\r\nIn ultricies rutrum tempus. Mauris vel molestie orci.', 1, 349999, 3, 5, 4, '/images/product_img-1613971302945.png', 'Second', '2021-01-07 07:54:13', '2021-02-22 12:22:31'),
 (31, 15, 'Dress Hitam Wanita', 'Adidas', 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis. Etiam tincidunt tristique placerat. Pellentesque a consequat mauris, vel suscipit ipsum. \r\nDonec ac mauris vitae diam commodo vehicula. Donec quam elit, sollicitudin eu nisl at, ornare suscipit magna.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis.\r\n\r\nIn ultricies rutrum tempus. Mauris vel molestie orci.', 14, 350000, 1, 3, 3, '/images/product_img-1609980875903.png', 'New', '2021-01-07 07:54:35', '2021-01-07 07:54:35'),
-(38, 15, 'Kaos Hitam Langka', 'adidas', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis. Etiam tincidunt tristique placerat. Pellentesque a consequat mauris, vel suscipit ipsum. \r\nDonec ac mauris vitae diam commodo vehicula. Donec quam elit, sollicitudin eu nisl at, ornare suscipit magna.\r\n\r\nDonec non magna rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet ac ac felis.\r\n\r\nIn ultricies rutrum tempus. Mauris vel molestie orci.', 1, 1000000, 1, 1, 100, '/images/product_img-1611835908108.jpeg,/images/product_img-1611835908122.jpg', 'New', '2021-01-28 19:11:48', '2021-02-18 02:09:50'),
-(40, 15, 'Baju Garis Panjang', 'Nike', 0, 'Lorem', 1, 100000, 1, 1, 12, '/images/product_img-1613589095286.jpg', '1', '2021-02-18 02:11:35', '2021-02-18 02:17:56');
+(42, 15, 'Dresss Wanita Motif', 'Star', 0, 'Lorem Ipsum', 14, 634736, 3, 5, 13, '/images/product_img-1613972099643.png,/images/product_img-1613972099649.png', 'New', '2021-02-22 12:34:59', '2021-02-22 12:38:43');
 
 -- --------------------------------------------------------
 
@@ -360,23 +406,25 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `phone` bigint(20) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
   `store` varchar(255) DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL,
   `level_id` int(11) NOT NULL,
-  `isVerified` tinyint(1) NOT NULL DEFAULT 1
+  `isVerified` tinyint(1) NOT NULL DEFAULT 1,
+  `store_desc` varchar(255) DEFAULT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `name`, `phone`, `store`, `img`, `level_id`, `isVerified`) VALUES
-(1, '48yunyun@gmail.com', '$2b$10$2AjGAmYEzR/FNpU.m9ZS7.9BwBh1jfGY2z88a3xeXseiYDfI0ZWF.', 'Bayu', 0, '', '', 1, 1),
-(2, 'erich@gmail.com', '$2b$10$3GEdca3uStJ0.9UO13Y7mOI.ygTWOYZdbfGlxxs8Fld1QtYqzU91u', 'Erich', 0, '', '', 2, 1),
-(12, 'bayu.erich@gmail.com', '$2b$10$rbHk6zrQONmqJBC4WRWmJe1Ckom1OCmfijFnPquyBg3BS8ZkFSnhm', 'BAyu', NULL, 'Bayu Shop', NULL, 1, 1),
-(14, 'feciwa7761@jentrix.com', '$2b$10$KE5NUuQ75wdEBhZ0m/p8E.6RTIKxmfdIXgzDoEZ0gB0LKploZK5Cm', 'Udin', NULL, '', NULL, 1, 1),
-(15, 'test@test.mail', '$2b$10$nO719JIY3lay3JvmBI5YV.cQ4OvOLW8rLZXAml7D3JoRnKPZxbiuK', 'test', NULL, NULL, NULL, 1, 1);
+INSERT INTO `users` (`id`, `email`, `password`, `name`, `phone`, `store`, `img`, `level_id`, `isVerified`, `store_desc`, `created`, `updated`) VALUES
+(1, '48yunyun@gmail.com', '$2b$10$a/zUBuNUoDyIy9UUvEx56O2MNtqQujXdegg1WVJmtkZ6fNptUjye6', 'Bayu', '0', '', '', 1, 1, NULL, '2021-02-22 14:34:49', '2021-02-22 14:34:49'),
+(2, 'erich@gmail.com', '$2b$10$3GEdca3uStJ0.9UO13Y7mOI.ygTWOYZdbfGlxxs8Fld1QtYqzU91u', 'Erich', '0', '', '', 2, 1, NULL, '2021-02-22 14:34:49', '2021-02-22 14:34:49'),
+(12, 'bayu.erich@gmail.com', '$2b$10$rbHk6zrQONmqJBC4WRWmJe1Ckom1OCmfijFnPquyBg3BS8ZkFSnhm', 'BAyu', NULL, 'Bayu Shop', NULL, 1, 1, NULL, '2021-02-22 14:34:49', '2021-02-22 14:34:49'),
+(15, 'test@test.mail', '$2b$10$sR11WiPciI0nixqzNLBuguSh.jisGg9uWpL.b.rbetoLFcDkVWSqa', 'Test', '0475385835', '', '/images/img-1613992170914.jpg', 2, 1, '', '2021-02-22 14:34:49', '2021-02-22 22:52:57');
 
 --
 -- Indexes for dumped tables
@@ -413,9 +461,27 @@ ALTER TABLE `invoice`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `item_order`
+--
+ALTER TABLE `item_order`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `levels`
 --
 ALTER TABLE `levels`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_status`
+--
+ALTER TABLE `order_status`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `otp`
+--
+ALTER TABLE `otp`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -450,13 +516,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `address`
 --
 ALTER TABLE `address`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `blacklist`
 --
 ALTER TABLE `blacklist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -474,7 +540,13 @@ ALTER TABLE `colors`
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT for table `item_order`
+--
+ALTER TABLE `item_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `levels`
@@ -483,10 +555,22 @@ ALTER TABLE `levels`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `order_status`
+--
+ALTER TABLE `order_status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `otp`
+--
+ALTER TABLE `otp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `sizes`
@@ -504,7 +588,7 @@ ALTER TABLE `transactions_history`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
