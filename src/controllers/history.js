@@ -36,7 +36,7 @@ module.exports = {
     const insertBody = {
       ...body,
       // transaction_date: new Date(Date.now()),
-      invoice_id: `INV/${year}/${month}/${day}/${genToken}`
+      invoice_id: `INV${year}${month}${day}${genToken}`
     };
     historyModel
       .postNewHistory(insertBody)
