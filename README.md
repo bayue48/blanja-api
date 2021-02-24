@@ -1,94 +1,87 @@
-# blanja-REST-API
+# blanja-api
 
-- [About Project](#about-project)
-- [Requirements](#requirements)
-- [Getting started](#getting-started)
-- [Related Project](#related-project)
-- 
-## About project
+Simple, easy implementation of the private web API.
 
-this project is a simple implementation of RESTful API using *framework* ExpressJS and MySQL *database* made for for <a href="blanja-proto.netlify.app">BlanjaIn</a> website
+## About The Project
 
-## Requirements
+API build in [Express.js](https://expressjs.com/) and [MySQL](https://www.mysql.com/) for [bayue48/blanja-web](https://github.com/bayue48/blanja-web)
 
-- npm [Node.js](https://nodejs.org/en/download/)
-  
+### Prerequisites
 
-- ExpressJS,  MySQL, Morgan, Bcrypt, JWT, Fs, NodeMailer, OTP-Generator, Socket.io
-  
-
-```
-npm install express mysql morgan bcrypt jsonwebtoken fs nodemailer otp-generator socket.io@2.3.0
-```
-**OR**
-```
-yarn add express mysql morgan bcrypt jsonwebtoken fs nodemailer otp-generator socket.io@2.3.0
-```
-
-## Getting started
+- [npm](https://nodejs.org/en/download/)
+  ```sh
+  npm install npm@latest -g
+  ```
 
 ### Installation
 
-1. Clone repository
-  
-  ```
-  git clone https://github.com/ariefw96/blanja-restAPI.git
-  ```
-  
-2. Install dependencies from package.json
-  
-  - npm
-    
-  
-  ```
-  npm install
-  ```
-  
-  - yarn
-    
-  
-  ```
-  yarn install
-  ```
-  
-3. Config database, you can set the configuration according to config folder
-  
-  ```
-  const conn = mysql.createConnection({
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USERNAME,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE
-  });
-  ```
-4. .env example
+1. Clone the repo
+   ```sh
+   git clone https://github.com/yae48/blanja-api.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+   This will install the dependencies inside `node_modules`
 
-  ```
-  MYSQL_HOST = "host"
-  MYSQL_USER = "username"
-  MYSQL_PASSWORD = "password"
-  MYSQL_DATABASE = "database"
-  USER_EMAIL = your_smtp_email@mail.com
-  PASS_EMAIL = your_password
-  SECRET_KEY = "VERY_SECRET_KEY"
-  ```
-  
-5. Dont forget to turn on server for MySQL database
-6. Type `yarn start` or `npm start` to run this project
-7. Happy coding!
+### MySQL configuration
+
+Please create database and make the changes in the `/src/config/mySQL.js` file.
+
+```js 
+host: YOUR_HOSTNAME,
+user: YOUR_DBUSERNAME,
+password: YOUR_DBPASSWORD,
+database: YOUR_DBNAME,
+```
+
+### Usage
+
+`node index` OR `nodemon start` OR `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://yourhostname:8000/api/v2/](http://yourhostname:8000/api/v2/) to view it in the browser.
+
+### Endpoint
+
+- Get All Products
+```sh
+GET
+/api/v2/products
+```
+- Get Single Products
+```sh
+GET
+/api/v2/products/:id
+```
+- Add New Products
+```sh
+POST
+/api/v2/products
+```
+- Edit Existing Products
+```sh
+PATCH
+/api/v2/products/:id
+```
+- Delete Products
+```sh
+DELETE
+/api/v2/products/:id
+```
+
+### Documentation
+
+For more info visit [Postman](https://documenter.getpostman.com/view/13522642/TVmTdFLj#328f5097-2f0b-4bf4-82de-1757f82c6ac5)
 
 ## Related Project
 
-Some Project that using this **restful-API**
+Blanja Client.
 
-React Native
+- [Blanja (Web)](https://github.com/bayue48/blanja-app.git)
+- [Blanja (Android/Ios)](https://github.com/bayue48/blanja-mobile.git)
 
-[`BlanjaIn-React-Native`](https://github.com/ariefw96/BlanjaIn-React-Native)
+## License
 
-React Js
-
-[`BlanjaIn-ReactJs`](https://github.com/ariefw96/BlanjaIn-React)
-
-For more information about documentation, check it out below ! 
-
-[POSTMAN DOCUMENTATION](https://documenter.getpostman.com/view/13530339/TW76Cj2E)
+Distributed under the MIT License.

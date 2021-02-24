@@ -1,7 +1,7 @@
 {
   "name": "blanja-api",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Simple, easy implementation of the private web API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -29,5 +29,13 @@
   },
   "devDependencies": {
     "eslint": "^7.14.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayue48/blanja-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bayue48/blanja-api/issues"
+  },
+  "homepage": "https://github.com/bayue48/blanja-api#readme"
 }
