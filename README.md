@@ -79,8 +79,8 @@ For more info visit [Postman](https://documenter.getpostman.com/view/13522642/TV
 
 Blanja Client.
 
-<a href="https://github.com/bayue48/blanja-app.git">Blanja App</a>
-
+- [Blanja (Web)](https://github.com/bayue48/blanja-app.git)
+- [Blanja (Android/Ios)](https://github.com/bayue48/blanja-mobile.git)
 
 ## License
 
